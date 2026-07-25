@@ -12,7 +12,7 @@ Les modifications sont les suivantes :
 ## Démarrage
 
 1. Connectez le téléphone et le PC au même Wi-Fi.
-2. Démarrez `LANCER_WIBWOB.bat` et gardez l'URL proposée `http://192.168.1.94:5000`.
+2. Démarrez `LANCER_WIBWOB.bat` et gardez l'URL proposée ex : `http://192.168.1.94:5000`.
 3. Autorisez le port TCP 5000 dans le pare-feu Windows pour le réseau privé.
 4. Installez l'APK avec `INSTALLER_APK_TEST.bat`, ou copiez `wwr_local_test.apk` sur le téléphone.
 5. Lancez l'application.
@@ -21,7 +21,7 @@ Le premier chargement peut télécharger beaucoup de données depuis la sauvegar
 
 ## Vérification
 
-Depuis le téléphone, ouvrez `http://192.168.1.94:5000/eal/help.html`. Une page doit s'afficher. Si ce test échoue, le jeu ne pourra pas charger les données.
+Depuis le téléphone, ouvrez ex : `http://192.168.1.94:5000/eal/help.html`. Une page doit s'afficher. Si ce test échoue, le jeu ne pourra pas charger les données.
 
 L'APK est signé v1, v2 et v3. Son SHA-256 est :
 
