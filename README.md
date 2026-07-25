@@ -25,6 +25,7 @@
 
 ### Prérequis
 
+- [WibWobPadaBoom](./WinWobPadaBoom)
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [PostgreSQL 18](https://www.postgresql.org/download/windows/)
 - [JavaTools](./disp.zip)
