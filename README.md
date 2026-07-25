@@ -10,6 +10,7 @@
 </p>
 
 > [!WARNING]
+> PATCH REMPLACER VOTRE ANCIEN .PS1 DANS CUSTOM APK BUILDER PAR LE NOUVEAU [Nouveau .ps1 ](./Build-CustomApk.ps1)
 > Projet non officiel, de préservation et de test local. Il n’est affilié ni à LEVEL-5 ni à NHN PlayArt. Ne redistribuez pas les données ou l’APK d’origine si vous n’en avez pas les droits.
 
 ## ✨ Contenu
