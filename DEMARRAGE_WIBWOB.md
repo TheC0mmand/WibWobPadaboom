@@ -12,14 +12,8 @@ Le projet utilise directement les tables et les assets de `WWR_BACKUP` : aucune 
    ```
 
    La sauvegarde fait environ 919 Mo et contient les comptes ; n'importez pas `Database\schema.sql` en plus. La dernière commande recrée uniquement la table `mail`, absente par conception de `backup_nomail.sql`, pour que l'authentification par e-mail fonctionne.
-3. Lancez le serveur :
-
-   ```powershell
-   $env:ASPNETCORE_ENVIRONMENT = 'Development'
-   $env:ASPNETCORE_URLS = 'http://0.0.0.0:5000'
-   dotnet run --no-launch-profile
-   ```
-
+3. Lancez 
+LANCER_WIBWOB.bat
 Le serveur expose aussi les assets archivés sous `http://<adresse>:5000/eal/...`. L'endpoint `init.nhn` annonce désormais cette même URL au client au lieu de `gameserver.yw-p.com`.
 
 Ne rendez pas la base PostgreSQL publique et ne versionnez jamais `appsettings.Development.json`.
