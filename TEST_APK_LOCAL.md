@@ -17,7 +17,7 @@ Les modifications sont les suivantes :
 4. Installez l'APK avec `INSTALLER_APK_TEST.bat`, ou copiez `wwr_local_test.apk` sur le téléphone.
 5. Lancez l'application.
 
-Le premier chargement peut télécharger beaucoup de données depuis la sauvegarde WWR. L'APK ne fonctionnera que tant que le PC conserve l'adresse `192.168.1.94`; si cette adresse change, il faut reconstruire l'APK et modifier l'adresse dans le lanceur.
+Le premier chargement peut télécharger beaucoup de données depuis la sauvegarde WWR. L'APK ne fonctionnera que tant que le PC conserve l'adresse ip locale; si cette adresse change, il faut reconstruire l'APK et modifier l'adresse dans le lanceur.
 
 ## Vérification
 
