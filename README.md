@@ -25,10 +25,10 @@
 
 ### Prérequis
 
-- [WibWobPadaBoom](./WinWobPadaBoom)
+- [WibWobPadaBoom](https://mega.nz/file/ftIj1S6S#k3dH64iA6VGsynj1I8IAS0WWOkHeVZ5-w8oS6FDyIlM)
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [PostgreSQL 18](https://www.postgresql.org/download/windows/)
-- [JavaTools](https://mega.nz/file/ftIj1S6S#k3dH64iA6VGsynj1I8IAS0WWOkHeVZ5-w8oS6FDyIlM)
+- [JavaTools](./JavaTools.zip)
 - Un PC et un téléphone sur le même Wi-Fi
 
 ### Lancer le serveur
