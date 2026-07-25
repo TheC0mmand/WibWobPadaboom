@@ -21,7 +21,7 @@
 | `wwr_local_test.apk` | APK de test actuellement générée pour le réseau local. |
 | `CUSTOM_APK_BUILDER/` | Outils et guide pour fabriquer une APK pointant vers une autre IP. |
 ## Partie 1 : Setup du serveur
-[https://youtu.be/Tp2rKBAVN8A](url)
+[Lien Youtube Partie 1 ](https://youtu.be/Tp2rKBAVN8A)
 
 ## 🚀 Démarrage rapide (Windows)
 
