@@ -30,6 +30,7 @@
 - [PostgreSQL 18](https://www.postgresql.org/download/windows/)
 - [Java JDK 21](https://www.oracle.com/fr/java/technologies/downloads/#jdk21-windows)
 - [JavaTools](./JavaTools.zip)
+- Android Studio
 - Un PC et un téléphone sur le même Wi-Fi
 
 ### Lancer le serveur
