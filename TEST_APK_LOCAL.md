@@ -63,7 +63,7 @@ Ces outils servent uniquement à construire l’APK. Le serveur C# utilise aussi
 4. Notez le chemin du SDK, habituellement :
 
    ```text
-   C:\Users\VOTRE_NOM\AppData\Local\Android\Sdk
+   C:\Users\VOTRE_NOM\AppData\Local\Android\Sdk\buildtools
    ```
 
 5. Créez la variable utilisateur `ANDROID_SDK_ROOT` avec ce chemin.
