@@ -27,12 +27,13 @@
 
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [PostgreSQL 18](https://www.postgresql.org/download/windows/)
+- [JavaTools](./disp.zip)
 - Un PC et un téléphone sur le même Wi-Fi
 
 ### Lancer le serveur
 
 1. Démarrez PostgreSQL.
-2. Double-cliquez sur [`LANCER_WIBWOB.bat`](./LANCER_WIBWOB.bat).
+2. Double-cliquez sur [`LANCER_WIBWOB.bat`].
 3. Saisissez le mot de passe de l’utilisateur PostgreSQL `postgres`.
 4. Indiquez l’adresse LAN du PC, par exemple :
 
