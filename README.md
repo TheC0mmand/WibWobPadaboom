@@ -24,6 +24,8 @@
 | `CUSTOM_APK_BUILDER/` | Outils et guide pour fabriquer une APK pointant vers une autre IP. |
 ## Partie 1 : Setup du serveur
 [Lien Youtube Partie 1 ](https://youtu.be/Tp2rKBAVN8A)
+## Partie 2 : Setup de l'apk
+[Lien Youtube Partie 2 ](https://youtu.be/82KAYBL1vQQ)
 
 ## 🚀 Démarrage rapide (Windows)
 
