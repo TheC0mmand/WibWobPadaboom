@@ -1,5 +1,5 @@
 # WibWob Reload
-
+[test](Updating-from-an-older-version)
 **Documentation: [Français](README.md) | English**
 
 A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
@@ -116,8 +116,6 @@ See [TEST_APK_LOCAL.en.md](TEST_APK_LOCAL.en.md) for the detailed guide.
    - `CUSTOM_APK_BUILDER/lang/en.lang`.
 7. Start `LANCER_WIBWOB.bat`.
 8. Rebuild the APK only if the server IP changed or the previous APK no longer connects.
-
-The old `WibWobAdmin.exe` and `WibWobApkBuilder.exe` files are no longer used. Run only the executables ending in ``.
 
 ## Administration
 
