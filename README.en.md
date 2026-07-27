@@ -135,9 +135,8 @@ The Admin Client creates backups before sensitive operations. Never publish acco
 
 ## Documentation
 
-- [Server and PostgreSQL installation](DEMARRAGE_WIBWOB.en.md)
 - [APK building and installation](TEST_APK_LOCAL.en.md)
-- [Admin Client guide](ADMIN_CLIENT/README.en.md)
+- [Admin Client guide](ADMINCLIENT.en.md)
 
 ## Credits
 
