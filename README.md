@@ -27,8 +27,10 @@ Serveur local communautaire et expérimental pour **Yo-kai Watch Wibble Wobble**
 Installez les logiciels suivants sur Windows :
 
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) pour le serveur ;
-- PostgreSQL 18 pour les comptes et sauvegardes ;
-- Java JDK 21, Android SDK Build-Tools et APKTool pour construire l’APK.
+- [PostgreSQL](https://www.postgresql.org/download/) 18 pour les comptes et sauvegardes ;
+- [JavaTools](./JavaTools.zip) ; 
+- [Java JDK 21](https://www.oracle.com/fr/java/technologies/downloads/#jdk21-windows);
+- Android SDK Build-Tools pour construire l’APK.
 
 Python n’est pas nécessaire pour utiliser les exécutables fournis.
 
@@ -53,8 +55,8 @@ Si vous utilisez une autre version de PostgreSQL, adaptez le numéro `18` dans l
 
    ```json
    {
-     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=VOTRE_MOT_DE_PASSE",
-     "PublicServerURL": "http://192.168.1.100:5000"
+     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=PASSWORD",
+     "PublicServerURL": "http://LOCALIPADRESS:5000"
    }
    ```
 
@@ -115,11 +117,9 @@ Le guide détaillé est disponible dans [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
 7. Relancez `LANCER_WIBWOB.bat`.
 8. Reconstruisez votre APK seulement si l’adresse IP du serveur a changé ou si votre ancienne APK ne se connecte plus.
 
-Les anciens exécutables `WibWobAdmin.exe` et `WibWobApkBuilder.exe` ne sont plus utilisés. Lancez uniquement les versions portant le suffixe `-Obfuscated`.
-
 ## Administration
 
-Lancez `ADMIN_CLIENT/WibWobAdmin-Obfuscated.exe`. Le serveur doit être arrêté avant toute modification directe de la base, car son cache peut réécrire les anciennes données.
+Lancez `ADMIN_CLIENT/WibWobAdmin.exe`. Le serveur doit être arrêté avant toute modification directe de la base, car son cache peut réécrire les anciennes données.
 
 Le client admin crée une sauvegarde avant les écritures sensibles. Ne publiez jamais les sauvegardes de comptes.
 
