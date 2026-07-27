@@ -41,7 +41,7 @@ Ne construisez pas l’APK tant que cette page n’est pas accessible.
 
 ## Utiliser le constructeur
 
-1. Lancez `CUSTOM_APK_BUILDER/WibWobApkBuilder-Obfuscated.exe`.
+1. Lancez `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe`.
 2. Choisissez **Français** ou **English**. Ce choix est mémorisé dans `builder-settings.json`.
 3. Sélectionnez l’APK source anglaise.
 4. Renseignez l’IPv4 du serveur et le port public, normalement `5000`.
