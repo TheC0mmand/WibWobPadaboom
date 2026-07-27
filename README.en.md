@@ -1,5 +1,8 @@
 # WibWob Reload
-[test](#updating-from-an-older-version)
+**Tutorial if you had an old version of the project**
+[Updating from an older version](#updating-from-an-older-version)
+
+
 **Documentation: [Français](README.md) | English**
 
 A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
