@@ -48,10 +48,9 @@ Si vous utilisez une autre version de PostgreSQL, adaptez le numéro `18` dans l
 ### 2. Configurer le serveur
 
 1. Décompressez le projet dans un dossier dont vous avez les droits d’écriture.
-2. Copiez `appsettings.example.json`.
-3. Renommez la copie en `appsettings.Development.json`.
-4. Exécutez `ipconfig` et notez l’adresse IPv4 du PC, par exemple `192.168.1.100`.
-5. Ouvrez `appsettings.Development.json` et renseignez :
+2. Ouvrez en `appsettings.Development.json`.
+3. Exécutez `ipconfig` et notez l’adresse IPv4 du PC, par exemple `192.168.1.100`.
+4. Ouvrez `appsettings.Development.json` et renseignez :
 
    ```json
    {
