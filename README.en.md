@@ -29,6 +29,7 @@ A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
 
 Install the following software on Windows:
 
+- [WibWobPadaBoom](https://mega.nz/file/Ctx3zQwT#4uBpoPU1ptBAHDWYnFcBMhjngXK_WWwYFVl79GIUqME) the main project;
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) for the server ;
 - [PostgreSQL](https://www.postgresql.org/download/) 18 for account and saves ;
 - [Apktool](./JavaTools.zip) ; 
