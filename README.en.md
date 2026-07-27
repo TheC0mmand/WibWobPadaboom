@@ -26,11 +26,11 @@ A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
 
 Install the following software on Windows:
 
-- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) pour le serveur ;
-- [PostgreSQL](https://www.postgresql.org/download/) 18 pour les comptes et sauvegardes ;
+- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) for the server ;
+- [PostgreSQL](https://www.postgresql.org/download/) 18 for account and saves ;
 - [Apktool](./JavaTools.zip) ; 
 - [Java JDK 21](https://www.oracle.com/fr/java/technologies/downloads/#jdk21-windows);
-- Android SDK Build-Tools pour construire l’APK.
+- Android SDK Build-Tools to build the apk.
 
 Python is not required to use the provided executables.
 
