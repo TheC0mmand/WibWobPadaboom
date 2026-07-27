@@ -134,9 +134,8 @@ Le client admin crée une sauvegarde avant les écritures sensibles. Ne publiez 
 
 ## Documentation
 
-- [Installation du serveur et de PostgreSQL](DEMARRAGE_WIBWOB.md)
 - [Construction et installation de l’APK](TEST_APK_LOCAL.md)
-- [Utilisation du client administrateur](ADMIN_CLIENT/README.md)
+- [Utilisation du client administrateur](ADMIN_CLIENT/ADMINCLIENT.md)
 
 ## Crédits
 
