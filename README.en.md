@@ -15,8 +15,8 @@ A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
 | Item | Purpose |
 | --- | --- |
 | `LANCER_WIBWOB.bat` | Starts the server with the Development configuration. |
-| `ADMIN_CLIENT/WibWobAdmin-Obfuscated.exe` | Manages local accounts and the database. |
-| `CUSTOM_APK_BUILDER/WibWobApkBuilder-Obfuscated.exe` | Builds an APK configured for the local server. |
+| `ADMIN_CLIENT/WibWobAdmin.exe` | Manages local accounts and the database. |
+| `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` | Builds an APK configured for the local server. |
 | `WWR_BACKUP/` | PostgreSQL backup and resources required by the server. |
 | `appsettings.example.json` | Configuration template without real credentials. |
 
@@ -26,11 +26,11 @@ A community-made, experimental local server for **Yo-kai Watch Wibble Wobble**.
 
 Install the following software on Windows:
 
-- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0);
-- PostgreSQL 18;
-- Java JDK 21;
-- Android SDK Build-Tools;
-- APKTool.
+- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) pour le serveur ;
+- [PostgreSQL](https://www.postgresql.org/download/) 18 pour les comptes et sauvegardes ;
+- [Apktool](./JavaTools.zip) ; 
+- [Java JDK 21](https://www.oracle.com/fr/java/technologies/downloads/#jdk21-windows);
+- Android SDK Build-Tools pour construire l’APK.
 
 Python is not required to use the provided executables.
 
@@ -55,8 +55,8 @@ If you use a different PostgreSQL version, adjust `18` in the paths below.
 
    ```json
    {
-     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=YOUR_PASSWORD",
-     "PublicServerURL": "http://192.168.1.100:5000"
+     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=PASSWORD",
+     "PublicServerURL": "http://LOCALIP:5000"
    }
    ```
 
@@ -79,13 +79,13 @@ The import may take several minutes. Run it only once and do not import `Databas
 1. Double-click `LANCER_WIBWOB.bat`.
 2. Keep the server window open.
 3. On the PC, open `http://127.0.0.1:5000/eal/help.html`.
-4. On a phone connected to the same Wi-Fi, open `http://PC_IP:5000/eal/help.html`.
+4. On a phone connected to the same Wi-Fi, open `http://LOCALIP:5000/eal/help.html`.
 
 If the PC test works but the phone test does not, allow the server ports through Windows Firewall and confirm both devices are on the same network.
 
 ### 5. Build the APK
 
-1. Run `CUSTOM_APK_BUILDER/WibWobApkBuilder-Obfuscated.exe`.
+1. Run `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe`.
 2. Choose **Français** or **English** for the Builder interface.
 3. Select a legally obtained English source APK.
 4. Enter the PC’s IPv4 address and port `5000`.
@@ -110,18 +110,18 @@ See [TEST_APK_LOCAL.en.md](TEST_APK_LOCAL.en.md) for the detailed guide.
 4. Keep your existing `appsettings.Development.json`.
 5. Keep your existing PostgreSQL database; do not run `createdb` or the SQL import again.
 6. Confirm these files are present:
-   - `ADMIN_CLIENT/WibWobAdmin-Obfuscated.exe`;
-   - `CUSTOM_APK_BUILDER/WibWobApkBuilder-Obfuscated.exe`;
+   - `ADMIN_CLIENT/WibWobAdmin.exe`;
+   - `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe`;
    - `CUSTOM_APK_BUILDER/lang/fr.lang`;
    - `CUSTOM_APK_BUILDER/lang/en.lang`.
 7. Start `LANCER_WIBWOB.bat`.
 8. Rebuild the APK only if the server IP changed or the previous APK no longer connects.
 
-The old `WibWobAdmin.exe` and `WibWobApkBuilder.exe` files are no longer used. Run only the executables ending in `-Obfuscated`.
+The old `WibWobAdmin.exe` and `WibWobApkBuilder.exe` files are no longer used. Run only the executables ending in ``.
 
 ## Administration
 
-Run `ADMIN_CLIENT/WibWobAdmin-Obfuscated.exe`. Stop the server before directly modifying the database because the server cache can overwrite external changes.
+Run `ADMIN_CLIENT/WibWobAdmin.exe`. Stop the server before directly modifying the database because the server cache can overwrite external changes.
 
 The Admin Client creates backups before sensitive operations. Never publish account backups.
 
