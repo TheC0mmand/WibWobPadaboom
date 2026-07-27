@@ -9,9 +9,9 @@ The Admin Client manages accounts stored in the local PostgreSQL server.
 
 ## Starting
 
-1. Configure and import PostgreSQL according to `../DEMARRAGE_WIBWOB.en.md`.
+1. Configure and import PostgreSQL according to `README.en.md`.
 2. Stop the server before directly modifying the database.
-3. Run `WibWobAdmin-Obfuscated.exe`.
+3. Run `WibWobAdmin.exe`.
 
 Python is not required to use the release executable.
 
@@ -36,5 +36,3 @@ Python is not required to use the release executable.
 ## Important
 
 The running server keeps loaded accounts in memory. A direct PostgreSQL edit can therefore be overwritten by the server cache. Always stop the server before saving a modification.
-
-`WibWobAdmin.py` is intended for development. Public releases must distribute `WibWobAdmin-Obfuscated.exe`, built from the obscured intermediate source.
