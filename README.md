@@ -104,7 +104,6 @@ Le guide détaillé est disponible dans [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
    - `appsettings.Development.json` ;
    - votre base PostgreSQL `wibwob` ;
    - `ADMIN_CLIENT/backups/` si ce dossier existe ;
-   - votre clé `CUSTOM_APK_BUILDER/wibwob-custom-test.keystore`.
 3. Copiez le contenu du paquet de mise à jour dans l’ancien dossier du projet et acceptez le remplacement des fichiers.
 4. Conservez votre ancien `appsettings.Development.json` : ne le remplacez pas par le fichier d’exemple.
 5. Conservez votre base PostgreSQL existante : ne relancez ni `createdb` ni l’import SQL.
@@ -115,8 +114,6 @@ Le guide détaillé est disponible dans [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
    - `CUSTOM_APK_BUILDER/lang/en.lang`.
 7. Relancez `LANCER_WIBWOB.bat`.
 8. Reconstruisez votre APK seulement si l’adresse IP du serveur a changé ou si votre ancienne APK ne se connecte plus.
-
-Les anciens exécutables `WibWobAdmin.exe` et `WibWobApkBuilder.exe` ne sont plus utilisés. Lancez uniquement les versions portant le suffixe ``.
 
 ## Administration
 
