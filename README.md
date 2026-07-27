@@ -1,5 +1,9 @@
 # WibWob Reload
 
+**Mise a jour si vous avez une ancienne version du projet**
+[Mise a jour](#Mise-à-jour-depuis-une-ancienne-version)
+
+
 **Documentation : Français | [English](README.en.md)**
 
 Serveur local communautaire et expérimental pour **Yo-kai Watch Wibble Wobble**.
