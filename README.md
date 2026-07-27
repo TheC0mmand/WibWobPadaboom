@@ -22,7 +22,7 @@ Serveur local communautaire et expérimental pour **Yo-kai Watch Wibble Wobble**
 | `ADMIN_CLIENT/WibWobAdmin.exe` | Administre les comptes et la base locale. |
 | `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` | Construit une APK pointant vers le serveur local. |
 | `WWR_BACKUP/` | Sauvegarde PostgreSQL et ressources nécessaires au serveur. |
-| `appsettings.example.json` | Modèle de configuration sans mot de passe réel. |
+| `appsettings.Development.json` | Modèle de configuration sans mot de passe réel. |
 
 ## Nouvelle installation — tutoriel complet
 
