@@ -58,7 +58,7 @@ Si vous utilisez une autre version de PostgreSQL, adaptez le numéro `18` dans l
 
    ```json
    {
-     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=VOTRE_MOT_DE_PASSE",
+     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=PASSWORD",
      "PublicServerURL": "http://192.168.1.100:5000"
    }
    ```
