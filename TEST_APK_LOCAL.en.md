@@ -37,7 +37,7 @@ Do not build the APK until this page is accessible.
 
 ## Use the APK Builder
 
-1. Run `CUSTOM_APK_BUILDER/WibWobApkBuilder-Obfuscated.exe`.
+1. Run `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe`.
 2. Choose **Français** or **English**. The choice is saved in `builder-settings.json`.
 3. Select the supported English source APK.
 4. Enter the server IPv4 address and public port, normally `5000`.
