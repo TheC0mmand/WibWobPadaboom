@@ -30,7 +30,7 @@ Serveur local communautaire et expérimental pour **Yo-kai Watch Wibble Wobble**
 
 Installez les logiciels suivants sur Windows :
 
-- [WibWobPadaBoom](https://mega.nz/file/Ctx3zQwT#4uBpoPU1ptBAHDWYnFcBMhjngXK_WWwYFVl79GIUqME) le projet principal dezipper le;
+- [WibWobPadaBoom](https://mega.nz/file/rtY3kTJD#nksXNAaiLicizXbpOXbwk2wGUEsVD5STt1cur8YEbIw) le projet principal dezipper le;
 - [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) pour le serveur ;
 - [PostgreSQL](https://www.postgresql.org/download/) 18 pour les comptes et sauvegardes ;
 - [Apktool](./JavaTools.zip) ; 
