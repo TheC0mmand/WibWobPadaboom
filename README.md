@@ -109,7 +109,7 @@ Le guide détaillé est disponible dans [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
    - `appsettings.Development.json` ;
    - votre base PostgreSQL `wibwob` ;
    - `ADMIN_CLIENT/backups/` si ce dossier existe ;
-3. Copiez le contenu du paquet de mise à jour dans l’ancien dossier du projet et acceptez le remplacement des fichiers.
+3. Dezipper le nouveau **WibWobPadaBoom** a l'endroit de l'ancien.
 4. Conservez votre ancien `appsettings.Development.json` : ne le remplacez pas par le fichier d’exemple.
 5. Conservez votre base PostgreSQL existante : ne relancez ni `createdb` ni l’import SQL.
 6. Vérifiez que ces fichiers sont présents :
