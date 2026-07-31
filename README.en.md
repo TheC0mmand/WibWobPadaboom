@@ -1,4 +1,4 @@
-# WibWob Reload ( Video will be uploaded soon )
+# WibWob Reload
 **Tutorial if you had an old version of the project**
 [Updating from an older version](#updating-from-an-older-version)
 
