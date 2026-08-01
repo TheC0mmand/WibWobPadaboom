@@ -16,7 +16,7 @@ Python n'est pas necessaire. Le jeu pris en charge est en anglais.
 
 ## 2. Installer manuellement
 
-1. [Telechargez le ZIP WibWobPadaBoom V1.1](https://mega.nz/file/CwpECSQJ#UcNqHXAKcA2nOe-IQrhK7LM9PR16r9IEjTH0qC6Bow0).
+1. [Telechargez le ZIP WibWobPadaBoom V1.1](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs).
 2. Dezippez-le dans un dossier writable, par exemple `C:\Games\WibWobReload`.
 3. Ouvrez `appsettings.Development.json`.
 4. Remplacez `CHANGE_ME` par votre mot de passe PostgreSQL et configurez `PublicServerURL` avec l'IPv4 du PC, par exemple `http://192.168.1.100:5000`.
