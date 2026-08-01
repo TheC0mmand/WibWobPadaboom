@@ -10,7 +10,7 @@ Avant de lancer le projet, installez :
 
 - [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) ;
 - [PostgreSQL 18 pour Windows](https://www.postgresql.org/download/windows/) ;
-- seulement pour reconstruire une APK : [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio) et [APKTool](https://apktool.org/docs/install/).
+- seulement pour reconstruire une APK : [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio) et [JavaTool/ApkTool](./JavaTools.zip).
 
 Python n'est pas necessaire. Le jeu pris en charge est en anglais.
 

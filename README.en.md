@@ -8,7 +8,7 @@ This is the user release folder. Download and extract the release ZIP, then set 
 
 - [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0);
 - [PostgreSQL 18 for Windows](https://www.postgresql.org/download/windows/);
-- only to rebuild an APK: [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio), and [APKTool](https://apktool.org/docs/install/).
+- only to rebuild an APK: [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio), and [JavaTool/ApkTool](./JavaTools.zip).
 
 ## Setup
 
