@@ -12,7 +12,7 @@ This is the user release folder. Download and extract the release ZIP, then set 
 
 ## Setup
 
-1. [Download the WibWobPadaBoom V1.1 ZIP](https://mega.nz/file/CwpECSQJ#UcNqHXAKcA2nOe-IQrhK7LM9PR16r9IEjTH0qC6Bow0) and extract it to a writable directory.
+1. [Download the WibWobPadaBoom V1.1 ZIP](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs) and extract it to a writable directory.
 2. In `appsettings.Development.json`, replace `CHANGE_ME` with the PostgreSQL password and set `PublicServerURL` to the PC's local IPv4 address and port 5000.
 3. Run `LANCER_WIBWOB.bat`; it opens the Admin Client.
 4. Let the Admin Client initialize the `wibwob` database when needed, then click **Start server**.
