@@ -1,150 +1,45 @@
-# WibWob Reload
+# WibWob Reload V1.1
 
-**Mise a jour si vous avez une ancienne version du projet**
-[Mise a jour](#Mise-à-jour-depuis-une-ancienne-version)
+**Documentation : Francais | [English](README.en.md)**
 
+Ce dossier est la release utilisateur. Il faut le telecharger, le dezipper puis faire l'installation manuellement ; aucun outil ne telecharge ou n'installe automatiquement le projet.
 
-**Documentation : Français | [English](README.en.md)**
+## 1. A telecharger
 
-Serveur local communautaire et expérimental pour **Yo-kai Watch Wibble Wobble**.
+Avant de lancer le projet, installez :
 
-> [!WARNING]
-> **Version anglaise uniquement.** Le serveur et le constructeur d’APK prennent en charge la version anglaise du jeu. Le choix Français/English proposé par le constructeur change uniquement la langue de son interface et de ses journaux ; il ne traduit pas le jeu.
+- [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) ;
+- [PostgreSQL 18 pour Windows](https://www.postgresql.org/download/windows/) ;
+- seulement pour reconstruire une APK : [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio) et [APKTool](https://apktool.org/docs/install/).
 
-> [!CAUTION]
-> Projet non officiel, sans affiliation, approbation ou partenariat avec **LEVEL-5**, **NHN PlayArt** ou **SuperTavor**. Les marques et contenus appartiennent à leurs propriétaires respectifs. N’utilisez et ne partagez que des fichiers pour lesquels vous disposez des droits nécessaires.
+Python n'est pas necessaire. Le jeu pris en charge est en anglais.
 
-## Contenu de la version
+## 2. Installer manuellement
 
-| Élément | Utilité |
-| --- | --- |
-| `LANCER_WIBWOB.bat` | Lance le serveur avec la configuration de développement. |
-| `ADMIN_CLIENT/WibWobAdmin.exe` | Administre les comptes et la base locale. |
-| `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` | Construit une APK pointant vers le serveur local. |
-| `WWR_BACKUP/` | Sauvegarde PostgreSQL et ressources nécessaires au serveur. |
-| `appsettings.Development.json` | Modèle de configuration sans mot de passe réel. |
+1. [Telechargez le ZIP WibWobPadaBoom V1.1](https://mega.nz/file/rtY3kTJD#nksXNAaiLicizXbpOXbwk2wGUEsVD5STt1cur8YEbIw).
+2. Dezippez-le dans un dossier writable, par exemple `C:\Games\WibWobReload`.
+3. Ouvrez `appsettings.Development.json`.
+4. Remplacez `CHANGE_ME` par votre mot de passe PostgreSQL et configurez `PublicServerURL` avec l'IPv4 du PC, par exemple `http://192.168.1.100:5000`.
+5. Lancez `LANCER_WIBWOB.bat`. Il ouvre l'admin.
+6. L'admin initialise la base `wibwob` si elle n'existe pas. Cliquez ensuite sur **Demarrer le serveur**.
 
-## Nouvelle installation — tutoriel complet
+Depuis le telephone sur le meme Wi-Fi, testez `http://IP_DU_PC:5000/eal/help.html` avant de lancer l'APK.
 
-### 1. Installer les prérequis
+## 3. APK
 
-Installez les logiciels suivants sur Windows :
+- APK deja construite : `APK/WibWobPadaBoom.apk`.
+- Pour creer votre propre APK : `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` puis [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
 
-- [WibWobPadaBoom](https://mega.nz/file/rtY3kTJD#nksXNAaiLicizXbpOXbwk2wGUEsVD5STt1cur8YEbIw) le projet principal dezipper le;
-- [.NET SDK 8](https://dotnet.microsoft.com/download/dotnet/8.0) pour le serveur ;
-- [PostgreSQL](https://www.postgresql.org/download/) 18 pour les comptes et sauvegardes ;
-- [Apktool](./JavaTools.zip) ; 
-- [Java JDK 21](https://www.oracle.com/fr/java/technologies/downloads/#jdk21-windows);
-- Android SDK Build-Tools pour construire l’APK.
+## Mise a jour depuis une ancienne version
 
-Python n’est pas nécessaire pour utiliser les exécutables fournis.
+Arretez le serveur, conservez votre `appsettings.Development.json`, votre base `wibwob` et `ADMIN_CLIENT/backups`. Extrayez ensuite V1.1, remettez votre configuration et ne reimportez pas `backup_nomail.sql` sur une base contenant deja des comptes.
 
-Ouvrez PowerShell et vérifiez les installations :
+## Contenu utile
 
-```powershell
-dotnet --version
-& 'C:\Program Files\PostgreSQL\18\bin\psql.exe' --version
-java -version
-apktool --version
-```
+- `Src`, `Properties`, `Puniemu.csproj` : serveur ;
+- `WWR_BACKUP` : base et ressources ;
+- `ADMIN_CLIENT` : administration et lancement ;
+- `CUSTOM_APK_BUILDER` : constructeur APK ;
+- `APK` : APK preconstruite.
 
-Si vous utilisez une autre version de PostgreSQL, adaptez le numéro `18` dans les chemins indiqués plus bas.
-
-### 2. Configurer le serveur
-
-1. Décompressez le projet dans un dossier dont vous avez les droits d’écriture.
-2. Ouvrez en `appsettings.Development.json`.
-3. Exécutez `ipconfig` et notez l’adresse IPv4 du PC, par exemple `192.168.1.100`.
-4. Ouvrez `appsettings.Development.json` et renseignez :
-
-   ```json
-   {
-     "PostgresConnectionString": "Host=127.0.0.1;Port=5432;Database=wibwob;Username=postgres;Password=PASSWORD",
-     "PublicServerURL": "http://192.168.1.100:5000"
-   }
-   ```
-
-Remplacez l’IP et le mot de passe par vos propres valeurs. Pour un téléphone, n’utilisez pas `localhost`.
-
-### 3. Créer et importer la base
-
-Depuis PowerShell, placé à la racine du projet :
-
-```powershell
-& 'C:\Program Files\PostgreSQL\18\bin\createdb.exe' -U postgres wibwob
-& 'C:\Program Files\PostgreSQL\18\bin\psql.exe' -U postgres -d wibwob -f .\WWR_BACKUP\backup_nomail.sql
-& 'C:\Program Files\PostgreSQL\18\bin\psql.exe' -U postgres -d wibwob -c 'CREATE TABLE IF NOT EXISTS public.mail (mail text PRIMARY KEY, "currentUdkey" text);'
-```
-
-L’import peut durer plusieurs minutes. Effectuez-le une seule fois et n’importez pas `Database/schema.sql` en complément.
-
-### 4. Démarrer et vérifier le serveur
-
-1. Double-cliquez sur `LANCER_WIBWOB.bat`.
-2. Gardez la fenêtre du serveur ouverte.
-3. Sur le PC, ouvrez `http://127.0.0.1:5000/eal/help.html`.
-4. Sur le téléphone connecté au même Wi-Fi, ouvrez `http://IP_DU_PC:5000/eal/help.html`.
-
-Si le test fonctionne sur le PC mais pas sur le téléphone, autorisez les ports du serveur dans le pare-feu Windows et vérifiez que les deux appareils utilisent le même réseau.
-
-### 5. Construire l’APK
-
-1. Lancez `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe`.
-2. Choisissez **Français** ou **English** pour l’interface du constructeur.
-3. Sélectionnez votre APK source anglaise obtenue légalement.
-4. Renseignez l’IPv4 du PC et le port `5000`.
-5. Indiquez les dossiers Java, Android Build-Tools et le fichier `apktool.bat` si leur détection automatique échoue.
-6. Cliquez sur **Construire l’APK**.
-7. Installez l’APK produite sur Android.
-
-Le guide détaillé est disponible dans [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
-
-## Mise à jour depuis une ancienne version
-
-> [!IMPORTANT]
-> Ne réimportez pas `backup_nomail.sql` si votre base `wibwob` contient déjà vos comptes.
-
-1. Arrêtez complètement le serveur avec `Ctrl+C`.
-2. Sauvegardez les éléments suivants :
-   - `appsettings.Development.json` ;
-   - votre base PostgreSQL `wibwob` ;
-   - `ADMIN_CLIENT/backups/` si ce dossier existe ;
-3. Dezipper le nouveau **WibWobPadaBoom** a l'endroit de l'ancien.
-4. Conservez votre ancien `appsettings.Development.json` : ne le remplacez pas par le fichier d’exemple.
-5. Conservez votre base PostgreSQL existante : ne relancez ni `createdb` ni l’import SQL.
-6. Vérifiez que ces fichiers sont présents :
-   - `ADMIN_CLIENT/WibWobAdmin.exe` ;
-   - `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` ;
-   - `CUSTOM_APK_BUILDER/lang/fr.lang` ;
-   - `CUSTOM_APK_BUILDER/lang/en.lang`.
-7. Relancez `LANCER_WIBWOB.bat`.
-8. Reconstruisez votre APK seulement si l’adresse IP du serveur a changé ou si votre ancienne APK ne se connecte plus.
-
-## Administration
-
-Lancez `ADMIN_CLIENT/WibWobAdmin.exe`. Le serveur doit être arrêté avant toute modification directe de la base, car son cache peut réécrire les anciennes données.
-
-Le client admin crée une sauvegarde avant les écritures sensibles. Ne publiez jamais les sauvegardes de comptes.
-
-## Sécurité
-
-- Ne rendez jamais PostgreSQL accessible depuis Internet.
-- Ne publiez pas `appsettings.Development.json`, une clé de signature ou une sauvegarde de compte.
-- N’ouvrez que les ports HTTP indispensables sur un réseau de confiance.
-- Utilisez une APK source obtenue légalement.
-
-## Documentation
-
-- [Construction et installation de l’APK](TEST_APK_LOCAL.md)
-- [Utilisation du client administrateur](ADMINCLIENT.md)
-
-## Crédits
-
-Projet basé sur **Puniemu**.
-
-- Zura et DarkCraft — développement principal
-- wibwob_yt — développement
-- onepiecefreak3 et kuronosuFear — aide au reverse engineering
-- picky_x_keizen — logo
-
-Configuration et outils locaux : **TheC0mmand**.
+Ne partagez pas `appsettings.Development.json` une fois configure.
