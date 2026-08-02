@@ -2,6 +2,12 @@
 
 **Documentation : Francais | [English](README.en.md)**
 
+> [!IMPORTANT]
+> ## Installateur Windows avec mise a jour automatique
+> L'installateur est disponible dans la [branche GitHub Auto-Update](https://github.com/TheC0mmand/WibWobPadaboom/tree/Auto-Update) : telechargez et lancez `WibWobInstaller_1.1.0.exe`.
+>
+> A chaque lancement, il recherche une nouvelle version de **l'installateur**, la verifie par SHA-256 puis la relance automatiquement si necessaire. Il ne telecharge pas le projet a votre place : telechargez toujours le ZIP V1.1 ci-dessous et selectionnez-le dans l'installateur.
+
 Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
 > [!WARNING]
@@ -16,7 +22,7 @@ Il n'y a pas d'installation automatique. Telechargez d'abord la release **WibWob
 
 [Telecharger WibWobPadaBoom](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs)
 
-Si le ZIP contient un dossier `production`, ouvrez ce dossier : c'est la version a utiliser et a partager.
+Utilisez directement le dossier extrait : c'est la version a utiliser et a partager.
 
 ## A telecharger avant de commencer
 
@@ -66,7 +72,7 @@ Les details sont dans [DEMARRAGE_WIBWOB.md](DEMARRAGE_WIBWOB.md) et [TEST_APK_LO
 - recompenses de premiere victoire story rechargees au demarrage du serveur ;
 - faux drop Orcanos retire du stage 7001001 ;
 - Moximous N (stage 1009001) donne la montre `30036` et l'app compatible `10` ;
-- dossier `production` nettoye pour la distribution manuelle.
+- dossier de distribution nettoye pour la release manuelle.
 
 ## Securite
 

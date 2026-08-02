@@ -2,6 +2,12 @@
 
 **Documentation: [Francais](README.md) | English**
 
+> [!IMPORTANT]
+> ## Windows installer with automatic updates
+> The installer is available from the [GitHub Auto-Update branch](https://github.com/TheC0mmand/WibWobPadaboom/tree/Auto-Update): download and run `WibWobInstaller_1.1.0.exe`.
+>
+> Each time it starts, it checks for a newer version of the **installer**, verifies it with SHA-256, then restarts it automatically if required. It does not download the project for you: always download the V1.1 ZIP below and select it in the installer.
+
 Community-made experimental local server for Yo-kai Watch Wibble Wobble.
 
 > [!WARNING]
@@ -9,7 +15,7 @@ Community-made experimental local server for Yo-kai Watch Wibble Wobble.
 
 ## V1.1 manual installation
 
-There is no automatic installation. Download the **WibWobPadaBoom V1.1** release ZIP from the distribution link, then extract it to a writable folder. If the archive contains a `production` folder, use that folder.
+There is no automatic installation. Download the **WibWobPadaBoom V1.1** release ZIP from the distribution link, then extract it to a writable folder.
 
 [Download WibWobPadaBoom](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs)
 
@@ -35,7 +41,7 @@ See [DEMARRAGE_WIBWOB.en.md](DEMARRAGE_WIBWOB.en.md) and [TEST_APK_LOCAL.en.md](
 - story first-clear rewards are loaded at server startup;
 - the fake Orcanos reward was removed from stage 7001001;
 - Moximous N stage 1009001 grants watch item `30036` and compatible app `10`;
-- the `production` folder is the clean manual distribution package.
+- the extracted folder is the clean manual distribution package.
 
 Do not share a configured `appsettings.Development.json`: it contains the PostgreSQL password.
 
