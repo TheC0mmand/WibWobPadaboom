@@ -4,7 +4,7 @@
 
 > [!IMPORTANT]
 > ## Installateur Windows avec mise a jour automatique
-> L'installateur est disponible dans la [branche GitHub Auto-Update](https://github.com/TheC0mmand/WibWobPadaboom/tree/Auto-Update) : telechargez et lancez `WibWobInstaller_1.1.1.exe`.
+> L'installateur est disponible dans la [branche GitHub Auto-Update](https://github.com/TheC0mmand/WibWobPadaboom/tree/Auto-Update) : telechargez et lancez `WibWobInstaller.bat` qui est dans le zip.
 >
 > A chaque lancement, il recherche une nouvelle version de **l'installateur**, la verifie par SHA-256 puis la relance automatiquement si necessaire. Il ne telecharge pas le projet a votre place : telechargez toujours le ZIP V1.1 ci-dessous et selectionnez-le dans l'installateur.
 
