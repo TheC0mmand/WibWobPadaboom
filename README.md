@@ -2,44 +2,76 @@
 
 **Documentation : Francais | [English](README.en.md)**
 
-Ce dossier est la release utilisateur. Il faut le telecharger, le dezipper puis faire l'installation manuellement ; aucun outil ne telecharge ou n'installe automatiquement le projet.
+Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
-## 1. A telecharger
+> [!WARNING]
+> Version anglaise uniquement. Le choix Francais/English du constructeur APK ne traduit que son interface, pas le jeu.
 
-Avant de lancer le projet, installez :
+> [!CAUTION]
+> Projet non officiel, sans affiliation avec LEVEL-5, NHN PlayArt ou SuperTavor. Utilisez uniquement les fichiers pour lesquels vous avez les droits necessaires.
 
+## Installation V1.1 : manuelle
+
+Il n'y a pas d'installation automatique. Telechargez d'abord la release **WibWobPadaBoom V1.1** depuis le lien de distribution, puis extrayez le ZIP dans un dossier ou vous avez les droits d'ecriture.
+
+[Telecharger WibWobPadaBoom](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs)
+
+Si le ZIP contient un dossier `production`, ouvrez ce dossier : c'est la version a utiliser et a partager.
+
+## A telecharger avant de commencer
+
+- le ZIP de la release WibWobPadaBoom V1.1 ;
 - [.NET SDK 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) ;
 - [PostgreSQL 18 pour Windows](https://www.postgresql.org/download/windows/) ;
-- seulement pour reconstruire une APK : [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio) et [JavaTool/ApkTool](./JavaTools.zip).
+- seulement pour reconstruire une APK : [Java JDK 21](https://adoptium.net/temurin/releases/?version=21), [Android Studio / SDK](https://developer.android.com/studio) et [APKTool](https://apktool.org/docs/install/).
 
-Python n'est pas necessaire. Le jeu pris en charge est en anglais.
+Python n'est pas necessaire : les outils utilisateur sont deja fournis en `.exe`.
 
-## 2. Installer manuellement
+Verifiez les prerequis dans PowerShell :
 
-1. [Telechargez le ZIP WibWobPadaBoom V1.1](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs).
-2. Dezippez-le dans un dossier writable, par exemple `C:\Games\WibWobReload`.
-3. Ouvrez `appsettings.Development.json`.
-4. Remplacez `CHANGE_ME` par votre mot de passe PostgreSQL et configurez `PublicServerURL` avec l'IPv4 du PC, par exemple `http://192.168.1.100:5000`.
-5. Lancez `LANCER_WIBWOB.bat`. Il ouvre l'admin.
-6. L'admin initialise la base `wibwob` si elle n'existe pas. Cliquez ensuite sur **Demarrer le serveur**.
+```powershell
+dotnet --version
+& 'C:\Program Files\PostgreSQL\18\bin\psql.exe' --version
+java -version
+apktool --version
+```
 
-Depuis le telephone sur le meme Wi-Fi, testez `http://IP_DU_PC:5000/eal/help.html` avant de lancer l'APK.
+## Demarrage rapide
 
-## 3. APK
+1. Ouvrez `appsettings.Development.json`.
+2. Remplacez `CHANGE_ME` par le mot de passe PostgreSQL choisi a l'installation.
+3. Executez `ipconfig`, puis remplacez l'IP de `PublicServerURL` par l'IPv4 du PC, par exemple `http://192.168.1.100:5000`.
+4. Double-cliquez sur `LANCER_WIBWOB.bat`. Il ouvre le client administrateur.
+5. Dans l'admin, laissez-le creer/importer la base `wibwob` si elle est absente, puis cliquez sur **Demarrer le serveur**.
+6. Depuis le telephone connecte au meme Wi-Fi, ouvrez `http://IP_DU_PC:5000/eal/help.html`. Le jeu ne pourra se connecter que si cette page fonctionne.
 
-- APK deja construite : `APK/WibWobPadaBoom.apk`.
-- Pour creer votre propre APK : `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` puis [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
+Les details sont dans [DEMARRAGE_WIBWOB.md](DEMARRAGE_WIBWOB.md) et [TEST_APK_LOCAL.md](TEST_APK_LOCAL.md).
+
+## APK
+
+- `APK/WibWobPadaBoom.apk` est l'APK finale deja construite.
+- Pour modifier l'adresse, le port ou reconstruire une APK, lancez `CUSTOM_APK_BUILDER/WibWobApkBuilder.exe` et suivez `TEST_APK_LOCAL.md`.
 
 ## Mise a jour depuis une ancienne version
 
-Arretez le serveur, conservez votre `appsettings.Development.json`, votre base `wibwob` et `ADMIN_CLIENT/backups`. Extrayez ensuite V1.1, remettez votre configuration et ne reimportez pas `backup_nomail.sql` sur une base contenant deja des comptes.
+1. Arretez le serveur.
+2. Sauvegardez `appsettings.Development.json`, votre base PostgreSQL `wibwob` et `ADMIN_CLIENT/backups` si present.
+3. Telechargez et extrayez V1.1 par-dessus une copie de l'ancien projet, ou utilisez un nouveau dossier.
+4. Conservez votre ancien `appsettings.Development.json` : ne gardez pas le fichier `CHANGE_ME` fourni par la release.
+5. Ne reimportez pas `WWR_BACKUP/backup_nomail.sql` si votre base contient deja vos comptes.
+6. Lancez l'admin puis le serveur.
 
-## Contenu utile
+## Changements V1.1
 
-- `Src`, `Properties`, `Puniemu.csproj` : serveur ;
-- `WWR_BACKUP` : base et ressources ;
-- `ADMIN_CLIENT` : administration et lancement ;
-- `CUSTOM_APK_BUILDER` : constructeur APK ;
-- `APK` : APK preconstruite.
+- recompenses de premiere victoire story rechargees au demarrage du serveur ;
+- faux drop Orcanos retire du stage 7001001 ;
+- Moximous N (stage 1009001) donne la montre `30036` et l'app compatible `10` ;
+- dossier `production` nettoye pour la distribution manuelle.
 
-Ne partagez pas `appsettings.Development.json` une fois configure.
+## Securite
+
+- Ne partagez jamais `appsettings.Development.json` apres l'avoir configure : il contient le mot de passe PostgreSQL.
+- Ne rendez pas PostgreSQL accessible depuis Internet.
+- N'ouvrez que les ports HTTP necessaires sur un reseau de confiance.
+
+Configuration et outils locaux : **TheC0mmand**.
