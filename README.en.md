@@ -4,7 +4,7 @@
 
 > [!IMPORTANT]
 > ## Windows installer with automatic updates
-> The installer is available from the [GitHub Auto-Update branch](./WibWobInstaller.exe)
+> The installer is available here [WibWobInstaller](./WibWobInstaller.exe)
 >
 > Each time it starts, it checks for a newer version of the **installer**, verifies it with SHA-256, then restarts it automatically if required. It does not download the project for you: always download the V1.1 ZIP below and select it in the installer.
 

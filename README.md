@@ -4,7 +4,7 @@
 
 > [!IMPORTANT]
 > ## Installateur Windows
-> L'installateur est disponible ici [Installer](./WibWobInstaller.exe).
+> L'installateur est disponible ici [WibWobInstaller](./WibWobInstaller.exe).
 
 Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
