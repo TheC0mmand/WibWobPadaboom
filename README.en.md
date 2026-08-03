@@ -4,7 +4,7 @@
 
 > [!IMPORTANT]
 > ## Windows installer with automatic updates
-> The installer is available from the [GitHub Auto-Update branch](https://github.com/TheC0mmand/WibWobPadaboom/tree/Auto-Update): download and run `WibWobInstaller_1.1.0.exe`.
+> The installer is available from the [GitHub Auto-Update branch](./WibWobInstaller.exe)
 >
 > Each time it starts, it checks for a newer version of the **installer**, verifies it with SHA-256, then restarts it automatically if required. It does not download the project for you: always download the V1.1 ZIP below and select it in the installer.
 
@@ -17,7 +17,7 @@ Community-made experimental local server for Yo-kai Watch Wibble Wobble.
 
 There is no automatic installation. Download the **WibWobPadaBoom V1.1** release ZIP from the distribution link, then extract it to a writable folder.
 
-[Download WibWobPadaBoom](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs)
+[Download WibWobPadaBoom](https://mega.nz/file/TsIxyRoS#sfKRXuzrE774Uev8LhNXA9CCbJ1RhXaBqer_l9wAP5Y)
 
 Download before starting:
 

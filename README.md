@@ -4,9 +4,7 @@
 
 > [!IMPORTANT]
 > ## Installateur Windows
-> L'installateur est disponible ici [Installer](./ServerInstaller.zip) : telechargez et lancez `WibWobInstaller.bat` qui est dans le zip.
->
-> A chaque lancement, il recherche une nouvelle version de **l'installateur**, la verifie par SHA-256 puis la relance automatiquement si necessaire. Il ne telecharge pas le projet a votre place : telechargez toujours le ZIP V1.1 ci-dessous et selectionnez-le dans l'installateur.
+> L'installateur est disponible ici [Installer](./WibWobInstaller.exe).
 
 Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
@@ -20,7 +18,7 @@ Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
 Il n'y a pas d'installation automatique. Telechargez d'abord la release **WibWobPadaBoom V1.1** depuis le lien de distribution, puis extrayez le ZIP dans un dossier ou vous avez les droits d'ecriture.
 
-[Telecharger WibWobPadaBoom](https://mega.nz/file/24hBnSyA#lRIf9XDH4r-HCx5K6xyKaX3B4pIrPLoH-AAxVk_cQVs)
+[Telecharger WibWobPadaBoom](https://mega.nz/file/TsIxyRoS#sfKRXuzrE774Uev8LhNXA9CCbJ1RhXaBqer_l9wAP5Y)
 
 Utilisez directement le dossier extrait : c'est la version a utiliser et a partager.
 
