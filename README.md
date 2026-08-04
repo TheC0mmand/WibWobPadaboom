@@ -5,6 +5,8 @@
 > [!IMPORTANT]
 > ## Installateur Windows
 > L'installateur est disponible ici [WibWobInstaller](./WibWobInstaller.exe).
+> ## Apk Universel :
+> [APK](./WibWobPadaBoom.apk)
 
 Serveur local communautaire et experimental pour Yo-kai Watch Wibble Wobble.
 
